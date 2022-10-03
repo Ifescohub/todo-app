@@ -33,7 +33,6 @@ count = locallyStoredTodo.length;
 finalRender();
 
 function template(value){
-    buttonFormat();
     return `
         <div class="todo-list">
             <div class="checkbox"></div>
