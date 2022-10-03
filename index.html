@@ -21,41 +21,31 @@
       <h1>Todo</h1>
   
       <div class="mode-toggle"></div>
-      <!-- <picture class="mode-toogle">
-        <img class="sun" src="images/icon-sun.svg" alt="Sun icon">
-        <img class="moon" src="images/icon-moon.svg" alt="Moon icon">
-      </picture> -->
     </div>
     
-    <form action="">
+    <form name="form" action="">
       <div class="checkbox"></div>
-      <input type="text" placeholder="Create a todo...">
+      <input name="input" type="text" placeholder="Create a todo...">
     </form>
 
     <section class="todo-container">
-      <div class="todo-list">
-        <div class="checkbox checked"></div>
-        <p class="list">Jog and dance around</p>
-        <img class="delete" src="images/icon-cross.svg" alt="">
-      </div>
 
-      <div class="todo-list">
-        <div class="checkbox"></div>
-        <p class="list">Create Todo List for the frontendmentor in 2 days if nepa allows it</p>
-        <img class="delete" src="images/icon-cross.svg" alt="">
-      </div>
+    </section>
+
+    <section class="todo-completed">
+      
     </section>
 
     <div class="todo-footer">
-      <p class="remaining-list">5 items left</p>
+      <p class="remaining"></p>
 
       <div class="filter-list">
-        <p class="active">All</p>
-        <p>Active</p>
-        <p>Completed</p>
+        <p class="allEl current">All</p>
+        <p class="activeEl">Active</p>
+        <p class="completedEl">Completed</p>
       </div>
       
-      <p class="clear-list">Clear Completed</p>
+      <p class="clear-completed">Clear Completed</p>
     </div>
 
     <div class="drag">
@@ -64,9 +54,9 @@
     
   </main>
 
-  <div class="attribution">
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 </body>
 </html>

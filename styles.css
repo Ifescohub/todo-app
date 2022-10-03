@@ -54,6 +54,7 @@ h1{
     background-image: var(--toggle-image);
 }
 
+
 body{
     font-family: 'Josefin Sans', sans-serif;
     font-size: 1rem;
@@ -114,6 +115,7 @@ form input{
     font: inherit;
     color: currentColor;
     vertical-align: -3px;
+    width: 90%
 }
 
 form .checkbox{
@@ -153,9 +155,12 @@ form .checkbox{
 
 .todo-container{
     border-radius: 7px 7px 0 0;
+    display: block;
 }
 
-.todo-list{
+
+.todo-list,
+.complete{
     border-bottom: 2px solid var(--clr-5);
     padding: 1rem;
     display: flex;
@@ -171,6 +176,11 @@ form .checkbox{
     text-decoration: line-through;
     opacity: 0.3;
 }
+
+.todo-completed{
+    display: none;
+}
+
 
 .todo-footer{
     display: grid;
@@ -203,13 +213,14 @@ form .checkbox{
     font-weight: 700;
 }
 
-.filter-list > *.active{
+.current{
     color: var(--clr-Blue);
 }
 
-.clear-list{
+.clear-completed{
     grid-column: 2;
     justify-self: flex-end;
+
 }
 
 .drag{
