@@ -94,7 +94,7 @@ main{
     max-width: 30rem;
 }
 
-main > *:not(.heading, .drag){
+main > *:not(.heading, .drag, .attribution){
     background-color: var(--clr-2);
 }
 
@@ -241,8 +241,7 @@ form input{
 .attribution { 
     font-size: 11px; 
     text-align: center;
-    position: absolute;
-    bottom: 2rem;
+    margin-block-start: 5rem;
 }
 
 .attribution a { 

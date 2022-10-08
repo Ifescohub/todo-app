@@ -70,15 +70,14 @@ document.forms["form"].onsubmit = (e)=>{
 
 
     if (input.length){
-        todoArray.push(input)
-        
-        increaseCount()
+        todoArray.push(input);
+        increaseCount();
         console.log(todoArray.indexOf(input))
     }
   
     localStorage.setItem("todos", JSON.stringify(todoArray));
     renderTodo(todoArray)
-   
+    
     
     form.reset();
 }
