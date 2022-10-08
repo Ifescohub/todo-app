@@ -42,6 +42,15 @@ h1{
     text-transform: uppercase;
 }
 
+.mode-toggle,
+.checkbox,
+.delete,
+.clear-completed,
+.filter-list > *{
+    cursor: pointer;
+}
+
+
 /* Mode Toggle */
 .mode-toggle{
     width: 2rem;
@@ -104,8 +113,12 @@ main > *:not(.heading, .drag){
 /* FORM  */
 form{
     margin-block: 2rem 1.2rem;
-    padding: 1rem;
+    
     border-radius: 7px;
+    align-items: center;
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
 }
 
 form input{
@@ -115,21 +128,17 @@ form input{
     font: inherit;
     color: currentColor;
     vertical-align: -3px;
-    width: 90%
-}
-
-form .checkbox{
-    float: left;
-    margin-inline-end: 0.8rem;
+    flex-basis: 100%;
+    padding: 0.5rem 1rem;
 }
 
 
 /* TODO SECTION  */
 .checkbox{
     width: 1.2rem;
-    height: 1.2rem;
+    aspect-ratio: 1;
     border: 1px solid var(--clr-4);
-    border-radius: 50%;
+    border-radius: 100vmax;
 }
 
 
@@ -220,7 +229,6 @@ form .checkbox{
 .clear-completed{
     grid-column: 2;
     justify-self: flex-end;
-
 }
 
 .drag{
@@ -264,7 +272,7 @@ form .checkbox{
         grid-column: 2;
     }
     
-    .clear-list{
+    .clear-completed{
         grid-column: 3;
     }
 

@@ -27,9 +27,6 @@ function finalRender(){
     }
 }
 
-count = locallyStoredTodo.length;
-        increaseCount();
-
 finalRender();
 
 function template(value){
@@ -45,10 +42,13 @@ function template(value){
 function renderTodo(items){
     let todoList = "";
 
-    items.map(item => {
-        todoList += template(item);
+    for (let i in items){
+        todoList += template(items[i])
+    }
+    // items.map(item => {
+    //     todoList += template(item);
         
-    });
+    // });
     
 
     todoContainer.innerHTML = todoList;
@@ -71,11 +71,11 @@ document.forms["form"].onsubmit = (e)=>{
 
     if (input.length){
         todoArray.push(input)
-       
+        
+        increaseCount()
         console.log(todoArray.indexOf(input))
     }
-    // count++;
-    increaseCount();
+  
     localStorage.setItem("todos", JSON.stringify(todoArray));
     renderTodo(todoArray)
    
@@ -86,8 +86,10 @@ document.forms["form"].onsubmit = (e)=>{
 
 
 function increaseCount(){
+    count = todoArray.length;
     remaining.textContent = `${count} items left`;
 }
+increaseCount();
 
 function buttonFormat(){
     todoContainer.addEventListener("click", (e)=>{
@@ -95,11 +97,11 @@ function buttonFormat(){
             let list = e.target.parentNode;
             let textIndex = todoArray.indexOf(list.children[1].textContent);
     
-            count--;
+            
             locallyStoredTodo.splice(textIndex, 1)
             localStorage.setItem("todos", JSON.stringify(todoArray));
             todoContainer.removeChild(list);
-            
+            increaseCount();
         }
     
         if (e.target.classList.contains("checkbox")){
