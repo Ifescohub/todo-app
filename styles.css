@@ -45,7 +45,7 @@ h1{
 .mode-toggle,
 .checkbox,
 .delete,
-.clear-completed,
+.clear-all,
 .filter-list > *{
     cursor: pointer;
 }
@@ -113,7 +113,6 @@ main > *:not(.heading, .drag, .attribution){
 /* FORM  */
 form{
     margin-block: 2rem 1.2rem;
-    
     border-radius: 7px;
     align-items: center;
     display: flex;
@@ -130,6 +129,10 @@ form input{
     vertical-align: -3px;
     flex-basis: 100%;
     padding: 0.5rem 1rem;
+}
+
+form .checkbox{
+    background-color: transparent;
 }
 
 
@@ -226,7 +229,7 @@ form input{
     color: var(--clr-Blue);
 }
 
-.clear-completed{
+.clear-all{
     grid-column: 2;
     justify-self: flex-end;
 }
@@ -235,13 +238,14 @@ form input{
     margin: 7rem auto 1rem;
     text-align: center;
     color: var(--clr-3);
+    visibility: hidden;
 }
 
 /* FOOTER  */
 .attribution { 
     font-size: 11px; 
     text-align: center;
-    margin-block-start: 5rem;
+    margin-block: 5rem 1rem;
 }
 
 .attribution a { 
@@ -271,7 +275,7 @@ form input{
         grid-column: 2;
     }
     
-    .clear-completed{
+    .clear-all{
         grid-column: 3;
     }
 

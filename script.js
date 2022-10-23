@@ -22,12 +22,19 @@ function finalRender(){
     if (locallyStoredTodo){
         todoArray = locallyStoredTodo;
         
-        renderTodo(todoArray);
-        
+        renderTodo(todoArray); 
     }
 }
 
 finalRender();
+
+
+//To clear all itmes/leads from the page and local storage
+document.querySelector(".clear-all").addEventListener("click", ()=>{
+    localStorage.clear();
+    todoArray = [];
+    renderTodo(todoArray); 
+});
 
 function template(value){
     return `
@@ -53,14 +60,6 @@ function renderTodo(items){
 
     todoContainer.innerHTML = todoList;
 }
-
-// function initialTodo(){
-//     const arr = ["Code all day", "Crate Todo app"];
-//     arr.map(item => todoArray.push(item))
-    
-//     // localStorage.setItem("todos", JSON.stringify(todoArray));
-//     renderTodo(todoArray);
-// }
 
 
 
