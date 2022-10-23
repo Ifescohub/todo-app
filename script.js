@@ -13,19 +13,19 @@ let count = 0;
 document.querySelector(".mode-toggle")
     .addEventListener("click", ()=>{
         document.documentElement.classList.toggle("light")
-    })
+})
 
 
+//Getting items stored in the local storage
 const locallyStoredTodo = JSON.parse(localStorage.getItem("todos"));
 
+// Rendering items in the local storage 
 function finalRender(){
     if (locallyStoredTodo){
         todoArray = locallyStoredTodo;
-        
         renderTodo(todoArray); 
     }
 }
-
 finalRender();
 
 
@@ -33,9 +33,12 @@ finalRender();
 document.querySelector(".clear-all").addEventListener("click", ()=>{
     localStorage.clear();
     todoArray = [];
+    increaseCount();
     renderTodo(todoArray); 
 });
 
+
+// Creating the todo Template 
 function template(value){
     return `
         <div class="todo-list">
@@ -45,6 +48,7 @@ function template(value){
         </div>
     `
 }
+
 
 function renderTodo(items){
     let todoList = "";
@@ -57,7 +61,6 @@ function renderTodo(items){
         
     // });
     
-
     todoContainer.innerHTML = todoList;
 }
 
