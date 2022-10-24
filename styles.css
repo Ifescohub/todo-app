@@ -113,13 +113,10 @@ main{
     margin-block-start: -3.5rem
 }
 
-.container > *:not(.heading, .drag, .attribution){
+.container > *{
     background-color: var(--clr-2);
 }
 
-.moon{
-    display: none;
-}
 
 /* FORM  */
 form{
@@ -150,7 +147,7 @@ form .checkbox{
 /* TODO SECTION  */
 .checkbox{
     width: 1.2rem;
-    aspect-ratio: 1;
+    height: 1.2rem;
     border: 1px solid var(--clr-4);
     border-radius: 100vmax;
 }
