@@ -15,47 +15,50 @@
   <script src="script.js" defer></script>
 </head>
 <body>
-  <header class="background"></header>
-  <main>
+  <header>
     <div class="heading">
       <h1>Todo</h1>
+      <div class="mode-toggle" id="toggle"></div>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <form name="form" action="">
+        <button class="checkbox"></button>
+        <input name="input" type="text" placeholder="Create a todo...">
+      </form>
   
-      <div class="mode-toggle"></div>
-    </div>
-    
-    <form name="form" action="">
-      <button class="checkbox"></button>
-      <input name="input" type="text" placeholder="Create a todo...">
-    </form>
-
-    <section class="todo-container">
-
-    </section>
-
-    <section class="todo-completed">
-      
-    </section>
-
-    <div class="todo-footer">
-      <p class="remaining"></p>
-
-      <div class="filter-list">
-        <p class="allEl current">All</p>
-        <p class="activeEl">Active</p>
-        <p class="completedEl">Completed</p>
+      <section class="todo-container">
+  
+      </section>
+  
+      <section class="todo-completed">
+        
+      </section>
+  
+      <div class="todo-footer">
+        <p class="remaining"></p>
+  
+        <div class="filter-list">
+          <p class="allEl current">All</p>
+          <p class="activeEl">Active</p>
+          <p class="completedEl">Completed</p>
+        </div>
+        
+        <p class="clear-all">Clear All</p>
       </div>
-      
-      <p class="clear-all">Clear All</p>
+  
+      <div class="drag">
+        <p>Drag and drop to reorder list</p>
+      </div>
     </div>
+  </main>
 
-    <div class="drag">
-      <p>Drag and drop to reorder list</p>
-    </div>
-    
+  <footer>
     <div class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="Github: https://github.com/Ifescohub" target="_blank">Udeh Ifeanyi</a>.
     </div>
-  </main>
+  </footer>
 </body>
 </html>

@@ -45,8 +45,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [https://github.com/Ifescohub/signup-form-validate](https://github.com/Ifescohub/signup-form-validate)
-- Live Site URL: [https://ifescohub.github.io/signup-form-validate/](https://ifescohub.github.io/signup-form-validate/)
+- Solution URL: [https://github.com/Ifescohub/todo-app](https://github.com/Ifescohub/todo-app)
+- Live Site URL: [https://ifesco-todo-app.netlify.app/](https://ifesco-todo-app.netlify.app/)
 
 ## My process
 
@@ -55,32 +55,17 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- Mobile-first workflow
-- [jQuery](https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js/) - jQuery
-- [jQuery Validation Plugin](https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js/) - jQuery Plugin
-- [Google Fonts](https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap/) - For Fonts
+- Javascript 
+- localStorage
 
 ### What I learned
 
-This challenge has given me the opportunity to learn a great deal about jQuery and its form validation plugin. WIth this, form validation become more easier and with less code.
+This challenge has given me the opportunity to learn how to use javascript localStorage
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
 
 ### Continued development
 
-I want to further work on my semantic use of HTML tags. Customizing the jQuery form validation to my best taste is what i will look forward to working on.
+I want to further learn how i can manipulate the local storage and make cool stuffs
 
 ## Author
 

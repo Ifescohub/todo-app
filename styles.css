@@ -57,13 +57,16 @@ h1{
     height: 2rem;
     background-image: var(--toggle-image);
     background-repeat:  no-repeat;
+    transition: 0.5s ease-in-out;
 }
 
 .mode-toggle.light{
     background-image: var(--toggle-image);
+    transition: 0.5s ease-in-out;
 }
 
 
+/* Body */
 body{
     font-family: 'Josefin Sans', sans-serif;
     font-size: 1rem;
@@ -76,43 +79,51 @@ body{
     place-items: center;
 }
 
-.background{
-    height: 35vh;
+
+/* Header  */
+header{
+    display: grid;
+    align-items: center;
+    min-height: 35vh;
     width: 100%;
-    position: absolute;
-    inset: 0;
     background-image: url(./images/bg-mobile-dark.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    z-index: -1;
 }
 
-main{
-    position: relative;
-    top: 10vh;
-    width: 90%;
-    max-width: 30rem;
-}
-
-main > *:not(.heading, .drag, .attribution){
-    background-color: var(--clr-2);
-}
-
-
-/* Heading  */
 .heading{
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
+}
+
+.heading,
+.container{
+    width: 90%;
+    max-width: 30rem;
+    margin-inline: auto;
+}
+
+/* .container */
+main{
+    width: 100%;
+}
+
+.container{
+    margin-block-start: -3.5rem
+}
+
+.container > *:not(.heading, .drag, .attribution){
+    background-color: var(--clr-2);
 }
 
 .moon{
     display: none;
 }
 
-
 /* FORM  */
 form{
-    margin-block: 2rem 1.2rem;
+    margin-block-end: 1.2rem;
     border-radius: 7px;
     align-items: center;
     display: flex;
@@ -245,7 +256,7 @@ form .checkbox{
 .attribution { 
     font-size: 11px; 
     text-align: center;
-    margin-block: 5rem 1rem;
+    margin-block: 1rem;
 }
 
 .attribution a { 
@@ -253,13 +264,13 @@ form .checkbox{
 }
 
 @media (min-width: 60rem) {
-    .background{
-        height: 42vh;
+    header{
+        min-height: 40vh;
         background-image: url(./images/bg-desktop-dark.jpg);
     }
     
-    main{
-        top: 13vh;
+    .heading,
+    .container{
         width: 50%;
         max-width: 50rem;
     }
